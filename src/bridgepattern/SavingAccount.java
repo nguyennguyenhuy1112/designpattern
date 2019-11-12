@@ -9,11 +9,24 @@ package bridgepattern;
  *
  * @author nguyennh
  */
-public class SavingAccount implements Account{
+public class SavingAccount implements Account {
+
+    private String name;
+    private float balance;
+
+    public SavingAccount(String name, float balance) {
+        this.name = name;
+        this.balance = balance;
+    }
 
     @Override
     public void openAccount() {
-        System.out.println("Mở tài khoản tiết kiệm");
+        System.out.println("create Saving Account!\n");
     }
-    
+
+    @Override
+    public String toString() {
+        return "SavingAccount: " + "name=" + name + ", balance=" + balance + " VND";
+    }
+
 }

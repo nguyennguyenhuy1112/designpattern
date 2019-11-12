@@ -10,6 +10,6 @@ package bridgepattern;
  * @author nguyennh
  */
 public interface Account {
-
+    
     void openAccount();
 }

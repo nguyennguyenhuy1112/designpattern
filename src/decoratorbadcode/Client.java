@@ -3,21 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bridgepattern;
+package decoratorbadcode;
 
 /**
  *
  * @author nguyennh
  */
-public class VietcomBank extends Bank{
+public class Client {
 
-    public VietcomBank(Account account) {
-        super(account);
-    }
+    public static void main(String[] args) {
+        TeamMember member1 = new TeamMember("Nguyen");
+        member1.doTask();
 
-    @Override
-    public void openAccount() {
-        account.openAccount();
     }
-    
 }

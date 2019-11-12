@@ -9,11 +9,24 @@ package bridgepattern;
  *
  * @author nguyennh
  */
-public class CheckingAccount implements Account{
+public class CheckingAccount implements Account {
+
+    private String name;
+    private float balance;
+
+    public CheckingAccount(String name, float balance) {
+        this.name = name;
+        this.balance = balance;
+    }
 
     @Override
     public void openAccount() {
-        System.out.println("Mở tài khoản tín dụng");
+        System.out.println("Create Checking Account!\n");
     }
-    
+
+    @Override
+    public String toString() {
+        return "CheckingAccount: " + "name=" + name + ", balance=" + balance + " VND";
+    }
+
 }

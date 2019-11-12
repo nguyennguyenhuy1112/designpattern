@@ -5,13 +5,21 @@
  */
 package bridgepattern;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author nguyennh
  */
 public class Client {
+
     public static void main(String[] args) {
-        Bank vietcomBank = new VietcomBank(new CheckingAccount());
-        vietcomBank.openAccount();
+        List<Account> accounts = new ArrayList<>();
+        accounts.add(new CheckingAccount("Nguyen Huy Nguyen", 9000000));
+        Bank vietinBank = new VietinBank(accounts);
+        vietinBank.openAccount(new SavingAccount("Nguyen Huy Nguyen", 1800000));
+
+        vietinBank.showAccount();
     }
 }

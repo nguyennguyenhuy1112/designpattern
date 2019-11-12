@@ -5,18 +5,28 @@
  */
 package bridgepattern;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author nguyennh
  */
 public abstract class Bank {
 
-    protected Account account;
-//    protected List<Account> accounts = new ArrayList<>
+    protected List<Account> accounts = new ArrayList<>();
 
-    public Bank(Account account) {
-        this.account = account;
+    public Bank(List<Account> accounts) {
+        this.accounts = accounts;
     }
 
-    public abstract void openAccount();
+    public abstract void openAccount(Account account);
+
+    public void showAccount() {
+        System.out.println("Account information:");
+        for (Account account : accounts) {
+            System.out.println(account.toString());
+        }
+    }
+
 }

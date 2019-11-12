@@ -11,9 +11,9 @@ import java.util.List;
  *
  * @author nguyennh
  */
-public class VietinBank extends Bank {
+public class ACB extends Bank{
 
-    public VietinBank(List<Account> accounts) {
+    public ACB(List<Account> accounts) {
         super(accounts);
     }
 
@@ -22,5 +22,5 @@ public class VietinBank extends Bank {
         this.accounts.add(account);
         account.openAccount();
     }
-
+    
 }
